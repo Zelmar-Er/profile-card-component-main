@@ -3,8 +3,8 @@
     --bg-color: hsl(185, 75%, 39%);
     --card-bg-color: rgb(250, 241, 241);
     --name-stats-color: hsl(229, 23%, 23%);
-    --line-color: hsl(227, 10%, 46%);
-    --shadow-color: hsl(0, 0%, 59%);
+    --shadow-color: hsl(227, 10%, 46%);
+    --line-color: hsl(0, 0%, 59%);
     /* fonts */
     --primary-font: 'Kumbh Sans';
     --name-stats-size: 18px;
@@ -15,11 +15,15 @@ body{
     max-width: 1440px;
     background-color: var(--bg-color);
     overflow: hidden;
+    font-family: var(--primary-font);
+    font-weight: var(--first-weight);
+    color: var(--line-color)
 }
 
 .circle{
     width: 70%;
     position: absolute;
+    z-index: -100;
 }
 .bg-top{
     top: -450px;
@@ -43,7 +47,7 @@ body{
     height: 400px;
     width: 350px;
     position: relative;
-    z-index: 100;
+    box-shadow: 5px 5px 30px var(--shadow-color);
 }
 
 .header{
@@ -62,8 +66,39 @@ body{
     border:solid var(--card-bg-color) 5px;
 }
 
+.data{
+    text-align: center;
+    margin-top: 5rem;
+}
+.data div{
+    margin-bottom: .8rem;
+}
+
+.stats{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border-top: solid var(--line-color) 1px;
+}
+.stats div{
+    margin: 17px;
+}
+
+div span{
+    font-size: var(--name-stats-size);
+    font-weight: var(--second-weight);
+    color: var(--name-stats-color)
+}
+
 .attribution{
     position: relative;
     bottom: 25px;
+    color: var(--line-color);
+    text-align: center;
+}
+.attribution a{
+    color: var(--name-stats-color)
 }
 
